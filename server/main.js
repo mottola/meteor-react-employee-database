@@ -11,7 +11,6 @@ Meteor.startup(() => {
 
   // query the collection for data and store to const
   const numberRecords = Employees.find({}).count();
-  console.log(numberRecords);
 
   // add check to make sure no data exists, if it does, no data
   // should be added
@@ -32,8 +31,8 @@ Meteor.startup(() => {
   }
 
   // set up publication
-  Meteor.publish('employees', () => {
+  Meteor.publish('employees', (per_page) => {
     // Limit the employees to 20 for the client
-    return Employees.find({}, { limit: 20 });
+    return Employees.find({}, { limit: per_page });
   });
 });
