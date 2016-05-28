@@ -1,4 +1,10 @@
+body {
+  background-color: rgb(120, 96, 55);
+}
+
 .employee-list {
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -6,4 +12,14 @@
 
 .thumbnail {
   width: 300px;
+  /*border: 2px solid rgb(161, 161, 161);*/
+  box-shadow: 1px 1px 2px 3px #2f2f2f;
+}
+
+.btn-primary {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  margin: 0 auto;
+
 }
